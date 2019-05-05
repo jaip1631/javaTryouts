@@ -6,13 +6,13 @@ package com.practice.DataStructures;
 public class SampleLinkedList {
 
   /*
-   * 10->20->30->NULL
+   * 1->2->3->NULL
    * */
   public static LinkedListNode sample_1() {
-    LinkedListNode head = new LinkedListNode(10);
-    LinkedListNode next_1 = new LinkedListNode(20);
-    LinkedListNode next_2 = new LinkedListNode(30);
-    LinkedListNode next_3 = new LinkedListNode(40);
+    LinkedListNode head = new LinkedListNode(1);
+    LinkedListNode next_1 = new LinkedListNode(2);
+    LinkedListNode next_2 = new LinkedListNode(3);
+    LinkedListNode next_3 = new LinkedListNode(4);
 
     head.next = next_1;
     next_1.next = next_2;
@@ -22,15 +22,15 @@ public class SampleLinkedList {
   }
 
   /*
-   * 10->20->30->40->50->60->NULL
+   * 1->2->3->4->5->6->NULL
    * */
   public static LinkedListNode sample_2() {
-    LinkedListNode head = new LinkedListNode(10);
-    LinkedListNode next_1 = new LinkedListNode(20);
-    LinkedListNode next_2 = new LinkedListNode(30);
-    LinkedListNode next_3 = new LinkedListNode(40);
-    LinkedListNode next_4 = new LinkedListNode(50);
-    LinkedListNode next_5 = new LinkedListNode(60);
+    LinkedListNode head = new LinkedListNode(1);
+    LinkedListNode next_1 = new LinkedListNode(2);
+    LinkedListNode next_2 = new LinkedListNode(3);
+    LinkedListNode next_3 = new LinkedListNode(4);
+    LinkedListNode next_4 = new LinkedListNode(5);
+    LinkedListNode next_5 = new LinkedListNode(6);
 
     head.next = next_1;
     next_1.next = next_2;

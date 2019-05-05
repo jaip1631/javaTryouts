@@ -8,6 +8,25 @@ import java.util.Queue;
  * Created by jaiprakash on 10/1/19
  */
 public class Utils {
+  public static void printInorder(TreeNode treeNode) {
+    if(treeNode == null)
+      return;
+
+    printInorder(treeNode.left);
+    System.out.println(treeNode.data);
+    printInorder(treeNode.right);
+  }
+
+
+  public static void printPreOrder(TreeNode treeNode) {
+    if(treeNode == null)
+      return;
+
+    System.out.println(treeNode.data);
+    printPreOrder(treeNode.left);
+    printPreOrder(treeNode.right);
+  }
+
   public static int getMin(int a, int b) {
     return a<b?a:b;
   }

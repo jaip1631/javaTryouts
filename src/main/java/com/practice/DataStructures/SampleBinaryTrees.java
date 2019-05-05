@@ -73,4 +73,30 @@ public class SampleBinaryTrees {
   }
 
 
+  /*
+   *           1
+   *               2
+   *                  3
+   *                      4
+   *                    5
+   * */
+  public static TreeNode sample_4() {
+    TreeNode root = new TreeNode(1);
+
+    TreeNode right = new TreeNode(2);
+    root.right = right;
+
+    right = new TreeNode(3);
+    root.right.right = right;
+
+    right = new TreeNode(4);
+    root.right.right.right = right;
+
+    right = new TreeNode(5);
+    root.right.right.right.left = right;
+
+    return root;
+  }
+
+
 }
