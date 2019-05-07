@@ -62,6 +62,33 @@ public class Subsets {
   /*
   Runtime: 1 ms
   Memory Usage: 38.4 MB
+  https://leetcode.com/submissions/detail/227198274/
+  */
+  public List<List<Integer>> subsets_2(int[] nums) {
+    List<Integer> curList = new ArrayList<>();
+    List<List<Integer>> result = new ArrayList<>();
+    generateAllSets_2(nums, 0, curList, result);
+    return result;
+  }
+  public void generateAllSets_2(int arr[], int curIndex, final List<Integer> curList,
+      final List<List<Integer>> result) {
+    if(curIndex == arr.length) {
+      result.add(new ArrayList<>(curList));
+      return;
+    }
+
+    for(int i = curIndex; i < arr.length; i++) {
+      curList.add(arr[i]);
+      generateAllSets_2(arr, i+1, curList, result);
+      curList.remove(curList.size()-1);
+    }
+
+    result.add(new ArrayList<>(curList));
+  }
+
+  /*
+  Runtime: 1 ms
+  Memory Usage: 38.4 MB
   https://leetcode.com/submissions/detail/226725036/
   */
   public List<List<Integer>> subsets_1(int[] nums) {

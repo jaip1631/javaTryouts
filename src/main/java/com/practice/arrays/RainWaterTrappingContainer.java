@@ -1,4 +1,4 @@
-package com.practice;
+package com.practice.arrays;
 
 /*
 https://leetcode.com/problems/container-with-most-water/

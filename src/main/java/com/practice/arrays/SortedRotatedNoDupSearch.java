@@ -1,4 +1,4 @@
-package com.practice;
+package com.practice.arrays;
 
 /*
 https://leetcode.com/problems/search-in-rotated-sorted-array/
