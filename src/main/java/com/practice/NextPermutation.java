@@ -1,6 +1,7 @@
-package com.practice.arrays;
+package com.practice;
 
 /*
+Tags: ArrayTag
 https://leetcode.com/problems/next-permutation/
 Next Permutation
 

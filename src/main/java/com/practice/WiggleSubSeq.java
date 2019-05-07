@@ -1,6 +1,7 @@
 package com.practice;
 
 /*
+Tags: ArrayTag, GreedyTag
 https://leetcode.com/problems/wiggle-subsequence/
 Wiggle Subsequence
 

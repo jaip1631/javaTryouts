@@ -1,6 +1,7 @@
-package com.practice.arrays;
+package com.practice;
 
 /*
+Tags: ArrayTag
 https://leetcode.com/problems/container-with-most-water/
 Container With Most Water
 

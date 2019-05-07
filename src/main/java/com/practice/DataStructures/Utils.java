@@ -1,6 +1,5 @@
 package com.practice.DataStructures;
 
-import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -8,6 +7,15 @@ import java.util.Queue;
  * Created by jaiprakash on 10/1/19
  */
 public class Utils {
+  public static void printSquaraMatrix(int arr[][]) {
+    for(int i = 0; i < arr.length; i++) {
+      for(int j = 0; j < arr.length; j++) {
+        System.out.print(arr[i][j]+" ");
+      }
+      System.out.println();
+    }
+  }
+
   public static void printInorder(TreeNode treeNode) {
     if(treeNode == null)
       return;

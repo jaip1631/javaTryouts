@@ -1,6 +1,7 @@
-package com.practice.arrays;
+package com.practice;
 
 /*
+Tags: ArrayTag
 https://leetcode.com/problems/combination-sum/submissions/
 Combination Sum
 
@@ -33,7 +34,6 @@ A solution set is:
 */
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class CombinationSum {

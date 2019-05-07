@@ -1,6 +1,7 @@
-package com.practice.arrays;
+package com.practice;
 
 /*
+Tags: ArrayTag, LeftRightTag
 https://leetcode.com/problems/3sum/
 3Sum
 

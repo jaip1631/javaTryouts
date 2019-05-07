@@ -1,6 +1,7 @@
-package com.practice.arrays;
+package com.practice;
 
 /*
+Tags: ArrayTag
 https://leetcode.com/problems/combination-sum-ii/
 Combination Sum II
 
