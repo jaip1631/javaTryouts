@@ -1,7 +1,7 @@
 package com.practice;
 
 /*
-Tags: ArrayTag
+Tags: ArrayTag, MatrixTag
 https://leetcode.com/problems/rotate-image/
 Rotate Image
 
