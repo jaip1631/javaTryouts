@@ -1,6 +1,7 @@
 package com.practice;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,6 +14,8 @@ public class CollectorsTry {
     list = list.stream()
               .map(integer -> integer*2)
               .collect(Collectors.toList());
+
+    list.sort(Comparator.reverseOrder());
     list.forEach(System.out::println);
   }
 }

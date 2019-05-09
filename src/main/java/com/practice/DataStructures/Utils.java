@@ -7,9 +7,9 @@ import java.util.Queue;
  * Created by jaiprakash on 10/1/19
  */
 public class Utils {
-  public static void printSquaraMatrix(int arr[][]) {
-    for(int i = 0; i < arr.length; i++) {
-      for(int j = 0; j < arr.length; j++) {
+  public static void printMatrix(int arr[][], int row, int col) {
+    for(int i = 0; i < row; i++) {
+      for(int j = 0; j < col; j++) {
         System.out.print(arr[i][j]+" ");
       }
       System.out.println();
