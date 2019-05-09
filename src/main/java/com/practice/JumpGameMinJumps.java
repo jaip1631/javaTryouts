@@ -25,7 +25,33 @@ public class JumpGameMinJumps {
 
   public static void main(String args[]) {
     JumpGameMinJumps test = new JumpGameMinJumps();
-    System.out.println(test.jump(new int[]{2,3,0,1,4}));
+    System.out.println(test.jumps_0(new int[]{1,1,1,3}));
+  }
+
+  /*
+  Runtime: 2 ms
+  Memory Usage: 38.2 MB
+  https://leetcode.com/submissions/detail/227797103/
+  */
+  public int jumps_0(int arr[]) {
+    if(arr == null || arr.length <= 1) {
+      return 0;
+    }
+
+    int maxReachable = 0, curStretch = maxReachable, jumps = 0;
+
+    for(int i = 0; i < arr.length-1; i++) {
+      if(i > maxReachable) {
+        return -1;
+      }
+      maxReachable = Math.max(maxReachable, arr[i]+i);
+      if(i == curStretch) {
+        jumps++;
+        curStretch = maxReachable;
+      }
+    }
+
+    return jumps;
   }
 
   /*
@@ -33,7 +59,7 @@ public class JumpGameMinJumps {
   Memory Usage: 38.5 MB
   https://leetcode.com/submissions/detail/227425324/
   */
-  public int jump(int[] nums) {
+  public int jumps_1(int[] nums) {
     if(nums == null || nums.length == 0) {
       return 0;
     }
