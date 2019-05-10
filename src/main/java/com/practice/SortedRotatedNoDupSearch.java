@@ -1,7 +1,7 @@
 package com.practice;
 
 /*
-Tags: ArrayTag, BinaryTag
+Tags: ArrayTag, BinarySearchTag
 https://leetcode.com/problems/search-in-rotated-sorted-array/
 Search in Rotated Sorted Array
 

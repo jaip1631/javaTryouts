@@ -31,7 +31,7 @@ public class MergeIntervals {
   public static void main(String args[]) {
     MergeIntervals test = new MergeIntervals();
     int arr[][] = test.merge_0(new int[][]{{1,7}, {3,6}, {8,9}, {10, 11}});
-    Utils.printMatrix(arr, arr.length, 2);
+    Utils.printMatrix(arr);
   }
 
   /*

@@ -1,7 +1,7 @@
 package com.practice;
 
 /*
-Tags: ArrayTag, BinaryTag
+Tags: ArrayTag, BinarySearchTag
 https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 Find Minimum in Rotated Sorted Array
 

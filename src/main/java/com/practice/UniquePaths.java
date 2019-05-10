@@ -15,10 +15,10 @@ The robot is trying to reach the bottom-right corner of the grid
 How many possible unique paths are there?
 */
 
-public class PathsToBottomRight {
+public class UniquePaths {
 
   public static void main(String args[]) {
-    PathsToBottomRight test = new PathsToBottomRight();
+    UniquePaths test = new UniquePaths();
     System.out.println(test.uniquePaths(3,2));
   }
 

@@ -8,7 +8,7 @@ public class Tags {
 
   GreedyTag: Greedy approach
 
-  BinaryTag: Binary algorithm
+  BinarySearchTag: Binary Search algorithm
 
   LeftRightTag: In a sorted array, find pair with sum=N.
               Take left and right. Move left -> left++ if curSum<N.

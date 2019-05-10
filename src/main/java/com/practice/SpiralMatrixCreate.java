@@ -27,7 +27,7 @@ public class SpiralMatrixCreate {
   public static void main(String args[]) {
     SpiralMatrixCreate test = new SpiralMatrixCreate();
     int matrix[][] = test.generateMatrix(3);
-    Utils.printMatrix(matrix, matrix.length, matrix.length);
+    Utils.printMatrix(matrix);
   }
 
   /*

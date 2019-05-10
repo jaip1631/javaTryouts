@@ -55,10 +55,9 @@ public class RotateMatrix90Clockwise {
   public static void main(String args[]) {
     RotateMatrix90Clockwise test = new RotateMatrix90Clockwise();
     int arr[][] = {{1,2,3},{4,5,6},{7,8,9}};
-    Utils.printMatrix(arr, arr.length, arr.length);
+    Utils.printMatrix(arr);
     test.rotate(arr);
-    System.out.println();
-    Utils.printMatrix(arr, arr.length, arr.length);
+    Utils.printMatrix(arr);
   }
 
   /*
