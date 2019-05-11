@@ -1,13 +1,4 @@
-import com.practice.DataStructures.MinHeap;
-import com.practice.DataStructures.SampleBinaryTrees;
-import com.practice.PrintSuccessiveLeafNodes;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.util.Arrays;
-import java.util.stream.IntStream;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
+import com.practice.datastructures.MinHeap;
 import org.junit.Test;
 
 /**

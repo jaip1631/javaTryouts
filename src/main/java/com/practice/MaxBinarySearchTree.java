@@ -1,8 +1,8 @@
 package com.practice;
 
-import com.practice.DataStructures.SampleBinarySearchTrees;
-import com.practice.DataStructures.SampleBinaryTrees;
-import com.practice.DataStructures.TreeNode;
+import com.practice.datastructures.SampleBinarySearchTrees;
+import com.practice.datastructures.SampleBinaryTrees;
+import com.practice.datastructures.TreeNode;
 
 public class MaxBinarySearchTree {
   MaxBSTData getMaxBSTUtil(TreeNode root) {

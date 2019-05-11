@@ -1,4 +1,4 @@
-package com.practice.DataStructures;
+package com.practice.datastructures;
 
 public class LinkedListUtils {
   public static void printLinkedList(LinkedListNode head) {

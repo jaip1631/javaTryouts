@@ -1,7 +1,7 @@
 package com.practice;
 
-import com.practice.DataStructures.TreeNode;
-import com.practice.DataStructures.Utils;
+import com.practice.datastructures.TreeNode;
+import com.practice.datastructures.Utils;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;

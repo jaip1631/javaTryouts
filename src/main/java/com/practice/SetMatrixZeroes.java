@@ -38,7 +38,7 @@ Output:
 
 */
 
-import com.practice.DataStructures.Utils;
+import com.practice.datastructures.Utils;
 
 public class SetMatrixZeroes {
 

@@ -1,6 +1,7 @@
 package com.practice;
 
 /*
+Tags: LinkedListTag
 https://leetcode.com/problems/add-two-numbers/
 Add Two Numbers
 
@@ -18,9 +19,9 @@ Explanation: 342 + 465 = 807.
 
 */
 
-import com.practice.DataStructures.LinkedListNode;
-import com.practice.DataStructures.LinkedListUtils;
-import com.practice.DataStructures.SampleLinkedList;
+import com.practice.datastructures.LinkedListNode;
+import com.practice.datastructures.LinkedListUtils;
+import com.practice.datastructures.SampleLinkedList;
 
 public class AddTwoNoLinkedList {
 

@@ -1,7 +1,7 @@
 package com.practice;
 
 /*
-Tags: ArrayTag
+Tags: ArrayTag, BackTrackingTag
 https://leetcode.com/problems/combination-sum-ii/
 Combination Sum II
 
@@ -66,10 +66,6 @@ public class CombinationSumWithDup {
       final List<Integer> curList, final List<List<Integer>> result) {
     if(target == 0) {
       result.add(new ArrayList<>(curList));
-      return;
-    }
-
-    if(curIndex == arr.length) {
       return;
     }
 

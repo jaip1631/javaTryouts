@@ -20,7 +20,7 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 
 */
 
-import com.practice.DataStructures.Utils;
+import com.practice.datastructures.Utils;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;

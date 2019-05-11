@@ -1,7 +1,7 @@
 package com.practice;
 
 /*
-Tags: DPTag, MatrixTag
+Tags: MatrixTag, DPTag
 https://leetcode.com/problems/minimum-path-sum/
 Minimum Path Sum
 
@@ -22,7 +22,7 @@ Explanation: Because the path 1→3→1→1→1 minimizes the sum.
 
 */
 
-import com.practice.DataStructures.Utils;
+import com.practice.datastructures.Utils;
 
 public class MinimumPathSum {
 

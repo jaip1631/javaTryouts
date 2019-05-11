@@ -32,12 +32,12 @@ Output: false
 
 */
 
-import com.practice.DataStructures.Utils;
+import com.practice.datastructures.Utils;
 
-public class Searcha2DMatrix {
+public class SearchIn2DMatrix {
 
   public static void main(String args[]) {
-    Searcha2DMatrix test = new Searcha2DMatrix();
+    SearchIn2DMatrix test = new SearchIn2DMatrix();
     int mat[][] = new int [][]{{1,3,5,7},{10,11,16,20},{23,30,34,50}};
     Utils.printMatrix(mat);
     System.out.println(test.searchMatrix(mat, 3));

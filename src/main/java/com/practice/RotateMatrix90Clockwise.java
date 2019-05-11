@@ -48,7 +48,7 @@ rotate the input matrix in-place such that it becomes:
 
 */
 
-import com.practice.DataStructures.Utils;
+import com.practice.datastructures.Utils;
 
 public class RotateMatrix90Clockwise {
 

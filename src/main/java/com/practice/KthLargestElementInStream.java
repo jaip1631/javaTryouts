@@ -1,8 +1,6 @@
 package com.practice;
 
-import com.practice.DataStructures.MinHeap;
-import java.util.Objects;
-import java.util.Stack;
+import com.practice.datastructures.MinHeap;
 
 /**
  * Created by jaiprakash on 19/1/19

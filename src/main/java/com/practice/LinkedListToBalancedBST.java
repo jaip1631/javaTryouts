@@ -1,10 +1,9 @@
 package com.practice;
 
-import com.practice.DataStructures.LinkedListNode;
-import com.practice.DataStructures.SampleLinkedList;
-import com.practice.DataStructures.TreeNode;
-import com.practice.DataStructures.Utils;
-import javax.rmi.CORBA.Util;
+import com.practice.datastructures.LinkedListNode;
+import com.practice.datastructures.SampleLinkedList;
+import com.practice.datastructures.TreeNode;
+import com.practice.datastructures.Utils;
 
 /**
  * Created by jaiprakash on 10/1/19

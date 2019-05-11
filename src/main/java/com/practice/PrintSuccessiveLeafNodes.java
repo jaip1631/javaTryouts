@@ -1,7 +1,7 @@
 package com.practice;
 
-import com.practice.DataStructures.TreeNode;
-import com.practice.DataStructures.SampleBinaryTrees;
+import com.practice.datastructures.TreeNode;
+import com.practice.datastructures.SampleBinaryTrees;
 
 /**
  * Created by jaiprakash on 30/11/18
