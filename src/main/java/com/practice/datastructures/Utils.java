@@ -22,7 +22,7 @@ public class Utils {
       return;
 
     printInorder(treeNode.left);
-    System.out.println(treeNode.data);
+    System.out.println(treeNode.val);
     printInorder(treeNode.right);
   }
 
@@ -31,7 +31,7 @@ public class Utils {
     if(treeNode == null)
       return;
 
-    System.out.println(treeNode.data);
+    System.out.println(treeNode.val);
     printPreOrder(treeNode.left);
     printPreOrder(treeNode.right);
   }

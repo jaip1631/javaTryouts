@@ -14,8 +14,8 @@ public class BinarySearchTreeCheck {
       return true;
     }
 
-    if((min != null && min.data >= root.data)
-        || (max != null && max.data <= root.data)) {
+    if((min != null && min.val >= root.val)
+        || (max != null && max.val <= root.val)) {
       return false;
     }
 
@@ -69,11 +69,11 @@ class BSTCheckDataUtil {
     if(!left.isBST || !right.isBST) {
       return false;
     }
-    if(left.getLargest() != null && root.data < left.getLargest().data) {
+    if(left.getLargest() != null && root.val < left.getLargest().val) {
       return false;
     }
 
-    if(right.getSmallest() != null && root.data > right.getSmallest().data) {
+    if(right.getSmallest() != null && root.val > right.getSmallest().val) {
       return false;
     }
 

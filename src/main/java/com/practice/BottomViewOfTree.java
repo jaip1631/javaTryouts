@@ -23,10 +23,10 @@ public class BottomViewOfTree {
     }
 
     if (node == null) {
-      node = new DoubleLinkedListNode(root.data);
+      node = new DoubleLinkedListNode(root.val);
       head = node;
     } else {
-      node.data = root.data;
+      node.data = root.val;
     }
 
     if(root.left != null) {

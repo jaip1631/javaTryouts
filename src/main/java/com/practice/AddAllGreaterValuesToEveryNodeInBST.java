@@ -17,8 +17,8 @@ public class AddAllGreaterValuesToEveryNodeInBST {
       modifyBSTUtil(root.right);
     }
 
-    root.data += addValue;
-    addValue = root.data;
+    root.val += addValue;
+    addValue = root.val;
 
     if(root.left != null) {
       modifyBSTUtil(root.left);
@@ -30,7 +30,7 @@ public class AddAllGreaterValuesToEveryNodeInBST {
       return;
     }
     printPostOrder(root.right);
-    System.out.println(root.data);
+    System.out.println(root.val);
     printPostOrder(root.left);
   }
   // This class initialises the value of sum to 0
@@ -50,9 +50,9 @@ public class AddAllGreaterValuesToEveryNodeInBST {
     this.modifyBSTUtil(treeNode.right, S);
 
     // Now *sum has sum of nodes in right subtree, add
-    // root->data to sum and update root->data
-    S.sum = S.sum + treeNode.data;
-    treeNode.data = S.sum;
+    // root->val to sum and update root->val
+    S.sum = S.sum + treeNode.val;
+    treeNode.val = S.sum;
 
     // Recur for left subtree
     this.modifyBSTUtil(treeNode.left, S);

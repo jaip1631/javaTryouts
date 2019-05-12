@@ -11,7 +11,7 @@ public class PrintSuccessiveLeafNodes {
   private TreeNode printSuccessiveLeafNodesUnOptimisedUtil(TreeNode root) {
     if(root != null) {
       if(root.left == null && root.right == null) {
-        System.out.print(root.data);
+        System.out.print(root.val);
         return null;
       }
 
@@ -30,7 +30,7 @@ public class PrintSuccessiveLeafNodes {
         printSuccessiveLeafNodesUnOptimisedUtil(root);
         System.out.println();
       }
-      System.out.print(root.data);
+      System.out.print(root.val);
     }
   }
 

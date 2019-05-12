@@ -5,11 +5,11 @@ package com.practice.datastructures;
  */
 
 public class TreeNode {
-  public Integer data;
+  public Integer val;
   public TreeNode left, right;
 
-  public TreeNode(int data) {
-    this.data = data;
+  public TreeNode(int val) {
+    this.val = val;
     left = right = null;
   }
 

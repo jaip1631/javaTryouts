@@ -30,5 +30,7 @@ public class Tags {
   BackTrackingTag: BackTracking questions
 
   LinkedListTag: LinkedList questions
+
+  TreeTag: Tree questions
   */
 }

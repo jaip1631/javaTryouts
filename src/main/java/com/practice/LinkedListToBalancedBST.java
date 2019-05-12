@@ -40,7 +40,7 @@ public class LinkedListToBalancedBST {
       fillBalancedTree(root.left);
     }
 
-    root.data = head.data;
+    root.val = head.data;
     head = head.next;
 
     if(root.right != null) {
