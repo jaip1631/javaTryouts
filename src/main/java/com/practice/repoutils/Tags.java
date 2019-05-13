@@ -32,5 +32,7 @@ public class Tags {
   LinkedListTag: LinkedList questions
 
   TreeTag: Tree questions
+
+  MathTag: Mathematics questions
   */
 }
