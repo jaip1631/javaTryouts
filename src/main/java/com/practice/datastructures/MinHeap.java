@@ -1,99 +1,108 @@
 package com.practice.datastructures;
 
-/**
- * Created by jaiprakash on 19/1/19
- */
 public class MinHeap {
+  private Integer arr[];
+  private int curIndex;
 
-  private int size;
-  private int capacity;
-  private int arr[];
+  public MinHeap(int arr[], int arrSize) {
+    this.arr = new Integer[arrSize];
+    for (curIndex = 0; curIndex < arrSize; curIndex++) {
+      this.arr[curIndex] = arr[curIndex];
+    }
+    curIndex--;
+    heapify(getParent(curIndex));
+  }
+  public MinHeap(int size) {
+    arr = new Integer[size];
+    curIndex = -1;
+  }
 
-  public MinHeap(int arr[], int arrSize, int heapSize) {
-    this.capacity = heapSize;
-    this.size = arrSize;
-    this.arr = new int[capacity];
-    for (int i = 0; i < arrSize; i++) {
-      this.arr[i] = arr[i];
+  public Integer top() {
+    if(curIndex != -1) {
+      return arr[0];
+    }
+    return null;
+  }
+
+  public Integer pop() {
+    if(curIndex == -1) {
+      return null;
     }
 
-    heapify();
+    Integer topElm = top();
+    arr[0] = arr[curIndex];
+    curIndex--;
+
+    if(curIndex != -1) {
+      percolateDown(0);
+    }
+
+    return topElm;
   }
 
-  public MinHeap() {
+  public void add(int n) {
+    if(curIndex == arr.length-1) {
+      return;
+    }
+
+    arr[++curIndex] = n;
+
+    percolateUp(curIndex);
   }
 
-  private void heapify() {
-    for (int i = size / 2; i >= 0; i--) {
-      percolateUp(i);
+  private void heapify(int startIndex) {
+    if(startIndex < 0) {
+      return;
+    }
+
+    for(int i = startIndex; i>=0; i--) {
+      percolateDown(i);
     }
   }
 
-  private int getLeftChildIndex(int index) {
-    return index * 2 + 1;
+  // used when replacing top with last element
+  // and re-imposing heap property. And Heapify
+  private void percolateDown(int index) {
+    int leftChildIndex = getLeftChild(index);
+    int rightChildIndex = getRightChild(index);
+    int min = index;
+    if(leftChildIndex <= curIndex && arr[min] > arr[leftChildIndex]) {
+      min = leftChildIndex;
+    }
+    if(rightChildIndex <= curIndex && arr[min] > arr[rightChildIndex]) {
+      min = rightChildIndex;
+    }
+
+    if(min != index) {
+      swap(min, index);
+      percolateDown(min);
+    }
   }
 
-  private int getRightChildIndex(int index) {
-    return index *2+2;
+  // used when adding an element at end of arr[]
+  private void percolateUp(int index) {
+    int parentIndex = getParent(index);
+    if(parentIndex >= 0 && arr[parentIndex] > arr[index]) {
+      swap(parentIndex, index);
+      percolateUp(parentIndex);
+    }
   }
 
-  private int getParentIndex(int index) {
+  private void swap(int a, int b) {
+    Integer temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+  }
+
+  private int getParent(int index) {
     return (index-1)/2;
   }
 
-  private void percolateUp(int index) {
-    if(index < 0)
-      return;
-    int leftChildIndex = getLeftChildIndex(index);
-    int rightChildIndex = getRightChildIndex(index);
-    int minValueIndex = index;
-
-    if(leftChildIndex < size
-        && arr[leftChildIndex] < arr[minValueIndex])
-        minValueIndex = leftChildIndex;
-    if(rightChildIndex < size
-        && arr[rightChildIndex] < arr[minValueIndex])
-        minValueIndex = rightChildIndex;
-
-    if(minValueIndex != index) {
-      int temp = arr[index];
-      arr[index] = arr[minValueIndex];
-      arr[minValueIndex] = temp;
-
-      percolateUp(getParentIndex(minValueIndex));
-    }
+  private int getLeftChild(int index) {
+    return (index*2)+1;
   }
 
-  public void push(int data) {
-    if(size == capacity) {
-      System.out.println("Heap Full");
-      return;
-    }
-
-    arr[size++] = data;
-    heapify();
-  }
-
-  public int pop() {
-    if(size == 0) {
-      System.out.println("Heap Already Empty");
-      return -1;
-    }
-
-    int heapTop = arr[0];
-    arr[0] = arr[size-1];
-    --size;
-    heapify();
-
-    return heapTop;
-  }
-
-  public int top() {
-    if(size == 0) {
-      System.out.println("Heap Already Empty");
-      return -1;
-    }
-
-    return arr[0];
+  private int getRightChild(int index) {
+    return (index*2)+2;
   }
 }

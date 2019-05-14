@@ -12,7 +12,7 @@ public class Tests {
   @Test
   public void test() {
     int arr[] = {3, 2, 1};
-    MinHeap minHeap = new MinHeap(arr, 3, 3);
+    MinHeap minHeap = new MinHeap(arr, 3);
     System.out.println(minHeap.top());
   }
 

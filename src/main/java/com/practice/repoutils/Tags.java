@@ -34,5 +34,9 @@ public class Tags {
   TreeTag: Tree questions
 
   MathTag: Mathematics questions
+
+  HeapTag: Heap questions
+
+  DivideAndConquerTag: DivideAndConquer questions
   */
 }
