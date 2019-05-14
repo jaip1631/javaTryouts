@@ -1,7 +1,7 @@
 package com.practice;
 
 /*
-Tags: ArragTag, LeftRightTag
+Tags: ArragTag, TwoPointersTag
 https://leetcode.com/problems/minimum-size-subarray-sum/
 Minimum Size Subarray Sum
 

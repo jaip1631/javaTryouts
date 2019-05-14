@@ -1,7 +1,7 @@
 package com.practice;
 
 /*
-Tags: LeftRightTag
+Tags: TwoPointersTag
 https://leetcode.com/problems/sort-colors/
 Sort Colors
 

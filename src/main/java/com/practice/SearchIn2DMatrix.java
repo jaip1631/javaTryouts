@@ -40,11 +40,15 @@ public class SearchIn2DMatrix {
     SearchIn2DMatrix test = new SearchIn2DMatrix();
     int mat[][] = new int [][]{{1,3,5,7},{10,11,16,20},{23,30,34,50}};
     Utils.printMatrix(mat);
-    System.out.println(test.searchMatrix(mat, 3));
+    System.out.println(test.searchMatrix_0(mat, 3));
   }
 
-
-  public boolean searchMatrix(int[][] mat, int target) {
+  /*
+  Runtime: 0 ms
+  Memory Usage: 39.8 MB
+  https://leetcode.com/submissions/detail/228057684/
+  */
+  public boolean searchMatrix_0(int[][] mat, int target) {
     if(mat.length == 0 || mat[0].length == 0) {
       return false;
     }
@@ -74,5 +78,28 @@ public class SearchIn2DMatrix {
       return search(mat, target, startRow, endRow, midCol+1, endCol)
           || search(mat, target, midRow+1, endRow, startCol, midCol);
     }
+  }
+
+  /*
+  Runtime: 1 ms
+  Memory Usage: 40.9 MB
+  https://leetcode.com/submissions/detail/228888406/
+  */
+  public boolean searchMatrix_1(int[][] matrix, int target) {
+    if(matrix == null || matrix.length < 1|| matrix[0].length <1)return false;
+    int row = 0;
+    int col = matrix[0].length-1;
+    while(row<matrix.length&&col>=0){
+      if(target == matrix[row][col]){
+        return true;
+      }
+      else if(target > matrix[row][col]){
+        row++;
+      }
+      else{
+        col--;
+      }
+    }
+    return false;
   }
 }

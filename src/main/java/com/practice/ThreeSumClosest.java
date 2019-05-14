@@ -1,7 +1,7 @@
 package com.practice;
 
 /*
-Tags: ArrayTag, LeftRightTag
+Tags: ArrayTag, TwoPointersTag
 https://leetcode.com/problems/3sum-closest/
 3Sum Closest
 
