@@ -1,6 +1,6 @@
 package com.practice;
 
-import com.practice.datastructures.LinkedListNode;
+import com.practice.datastructures.ListNode;
 import com.practice.datastructures.SampleLinkedList;
 import com.practice.datastructures.TreeNode;
 import com.practice.datastructures.Utils;
@@ -9,26 +9,26 @@ import com.practice.datastructures.Utils;
  * Created by jaiprakash on 10/1/19
  */
 public class LinkedListToBalancedBST {
-  LinkedListNode head;
+  ListNode head;
 
-  private TreeNode convertLinkedListToBalancedBST(LinkedListNode head) {
+  private TreeNode convertLinkedListToBalancedBST(ListNode head) {
     this.head = head;
 
     return constructAndFillBalancedBST(head);
     /*return constructThenFillBalancedBST(head);*/
   }
 
-  private TreeNode constructAndFillBalancedBST(LinkedListNode head) {
+  private TreeNode constructAndFillBalancedBST(ListNode head) {
     return null;
   }
 
-  private TreeNode constructThenFillBalancedBST(LinkedListNode head) {
+  private TreeNode constructThenFillBalancedBST(ListNode head) {
     TreeNode root = constructEmptyBalancedTree(head);
     fillBalancedTree(root);
     return root;
   }
 
-  private TreeNode constructEmptyBalancedTree(LinkedListNode head) {
+  private TreeNode constructEmptyBalancedTree(ListNode head) {
     return Utils.constructBalancedTreeOfSize(Utils.getSizeLinkedList(head));
   }
 
@@ -40,7 +40,7 @@ public class LinkedListToBalancedBST {
       fillBalancedTree(root.left);
     }
 
-    root.val = head.data;
+    root.val = head.val;
     head = head.next;
 
     if(root.right != null) {

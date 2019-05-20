@@ -40,7 +40,7 @@ public class Utils {
     return a<b?a:b;
   }
 
-  public static int getSizeLinkedList(LinkedListNode head) {
+  public static int getSizeLinkedList(ListNode head) {
     int size = 0;
 
     while(head != null) {

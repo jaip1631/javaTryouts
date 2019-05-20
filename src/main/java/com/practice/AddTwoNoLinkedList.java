@@ -19,7 +19,7 @@ Explanation: 342 + 465 = 807.
 
 */
 
-import com.practice.datastructures.LinkedListNode;
+import com.practice.datastructures.ListNode;
 import com.practice.datastructures.LinkedListUtils;
 import com.practice.datastructures.SampleLinkedList;
 
@@ -40,44 +40,44 @@ public class AddTwoNoLinkedList {
   Memory Usage: 46.2 MB
   https://leetcode.com/submissions/detail/223128031/
   */
-  public LinkedListNode addTwoNumbers(LinkedListNode l1, LinkedListNode l2) {
+  public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     if(l1 == null)
       return l2;
     if(l2 == null)
       return l1;
 
-    LinkedListNode resultHead = null, curNode = null;
+    ListNode resultHead = null, curNode = null;
     int carry = 0;
     while(l1 != null && l2 != null) {
       if(resultHead == null) {
-        resultHead = new LinkedListNode((l1.data + l2.data + carry)%10);
+        resultHead = new ListNode((l1.val + l2.val + carry)%10);
         curNode = resultHead;
       } else {
-        curNode.next = new LinkedListNode((l1.data + l2.data + carry)%10);
+        curNode.next = new ListNode((l1.val + l2.val + carry)%10);
         curNode = curNode.next;
       }
-      carry = (l1.data + l2.data + carry)/10;
+      carry = (l1.val + l2.val + carry)/10;
       l1 = l1.next;
       l2 = l2.next;
     }
 
     while(l1 != null) {
-      curNode.next = new LinkedListNode((l1.data + carry)%10);
+      curNode.next = new ListNode((l1.val + carry)%10);
       curNode = curNode.next;
-      carry = (l1.data + carry)/10;
+      carry = (l1.val + carry)/10;
       l1 = l1.next;
     }
 
 
     while(l2 != null) {
-      curNode.next = new LinkedListNode((l2.data + carry)%10);
+      curNode.next = new ListNode((l2.val + carry)%10);
       curNode = curNode.next;
-      carry = (l2.data + carry)/10;
+      carry = (l2.val + carry)/10;
       l2 = l2.next;
     }
 
     if(carry != 0) {
-      curNode.next = new LinkedListNode(carry);
+      curNode.next = new ListNode(carry);
     }
 
     return resultHead;

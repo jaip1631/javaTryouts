@@ -13,6 +13,8 @@ tags are entered in same order.
 public class Tags {
   /*
 
+  StarTag: Important questions
+
   ArrayTag: Array questions
 
   GreedyTag: Greedy approach
@@ -38,5 +40,7 @@ public class Tags {
   HeapTag: Heap questions
 
   DivideAndConquerTag: DivideAndConquer questions
+
+  SlidingWindowTag: SlidingWindow questions
   */
 }

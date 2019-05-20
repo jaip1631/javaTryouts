@@ -8,11 +8,11 @@ public class SampleLinkedList {
   /*
    * 1->2->3->NULL
    * */
-  public static LinkedListNode sample_1() {
-    LinkedListNode head = new LinkedListNode(1);
-    LinkedListNode next_1 = new LinkedListNode(2);
-    LinkedListNode next_2 = new LinkedListNode(3);
-    LinkedListNode next_3 = new LinkedListNode(4);
+  public static ListNode sample_1() {
+    ListNode head = new ListNode(1);
+    ListNode next_1 = new ListNode(2);
+    ListNode next_2 = new ListNode(3);
+    ListNode next_3 = new ListNode(4);
 
     head.next = next_1;
     next_1.next = next_2;
@@ -24,13 +24,13 @@ public class SampleLinkedList {
   /*
    * 1->2->3->4->5->6->NULL
    * */
-  public static LinkedListNode sample_2() {
-    LinkedListNode head = new LinkedListNode(1);
-    LinkedListNode next_1 = new LinkedListNode(2);
-    LinkedListNode next_2 = new LinkedListNode(3);
-    LinkedListNode next_3 = new LinkedListNode(4);
-    LinkedListNode next_4 = new LinkedListNode(5);
-    LinkedListNode next_5 = new LinkedListNode(6);
+  public static ListNode sample_2() {
+    ListNode head = new ListNode(1);
+    ListNode next_1 = new ListNode(2);
+    ListNode next_2 = new ListNode(3);
+    ListNode next_3 = new ListNode(4);
+    ListNode next_4 = new ListNode(5);
+    ListNode next_5 = new ListNode(6);
 
     head.next = next_1;
     next_1.next = next_2;
