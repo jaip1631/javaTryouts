@@ -27,7 +27,7 @@ public class PermutationsWithDup {
 
   public static void main(String args[]) {
     PermutationsWithDup test = new PermutationsWithDup();
-    System.out.println(test.permuteUnique(new int[]{0,0,0,1,9}));
+    System.out.println(test.permute_1(new int[]{0,0,0,1,9}));
   }
 
   /*
@@ -40,12 +40,8 @@ public class PermutationsWithDup {
         would be null. In boolean, default value is false, so no need to
         re-initialise it.
   */
-  public List<List<Integer>> permuteUnique(int[] nums) {
-    Arrays.sort(nums);
-    return permute_1(nums);
-  }
-
   public List<List<Integer>> permute_1(int[] nums) {
+    Arrays.sort(nums);
     List<List<Integer>> result = new ArrayList<>();
     List<Integer> path = new ArrayList<>();
     boolean isUsed[] = new boolean[nums.length];
@@ -77,11 +73,12 @@ public class PermutationsWithDup {
   }
 
   /*
-  Runtime: 2 ms
-  Memory Usage: 39.8 MB
-  https://leetcode.com/submissions/detail/230441300/
+  Runtime: 1 ms
+  Memory Usage: 38.3 MB
+  https://leetcode.com/submissions/detail/230542074/
   */
   public List<List<Integer>> permute_2(int[] nums) {
+    Arrays.sort(nums);
     List<List<Integer>> result = new ArrayList<>();
     List<Integer> path = new ArrayList<>();
 
@@ -100,11 +97,52 @@ public class PermutationsWithDup {
       if(i>curIndex && nums[i] == nums[i-1]) {
         continue;
       }
+      int val = nums[i];
+      for(int j = i-1; j >= curIndex; j--) {
+        nums[j+1] = nums[j];
+      }
+      nums[curIndex] = val;
+      path.add(nums[curIndex]);
+      permute_2(nums, result, path, curIndex+1);
+      path.remove(path.size()-1);
+      val = nums[curIndex];
+      for(int j = curIndex+1; j <= i; j++) {
+        nums[j-1] = nums[j];
+      }
+      nums[i] = val;
+    }
+  }
+
+  /*
+  Runtime: 2 ms
+  Memory Usage: 39.8 MB
+  https://leetcode.com/submissions/detail/230441300/
+  */
+  public List<List<Integer>> permute_3(int[] nums) {
+    Arrays.sort(nums);
+    List<List<Integer>> result = new ArrayList<>();
+    List<Integer> path = new ArrayList<>();
+
+    permute_3(nums, result, path, 0);
+    return result;
+  }
+
+  private void permute_3(int nums[], List<List<Integer>> result,
+      List<Integer> path, int curIndex) {
+    if(path.size() == nums.length) {
+      result.add(new ArrayList<>(path));
+      return;
+    }
+
+    for(int i = curIndex; i < nums.length; i++) {
+      if(i>curIndex && nums[i] == nums[i-1]) {
+        continue;
+      }
       int backup[] = Arrays.copyOfRange(nums, curIndex, nums.length);
       swap(nums, i, curIndex);
       Arrays.sort(nums, curIndex+1, nums.length);
       path.add(nums[curIndex]);
-      permute_2(nums, result, path, curIndex+1);
+      permute_3(nums, result, path, curIndex+1);
       path.remove(path.size()-1);
       for(int j = curIndex; j < nums.length; j++) {
         nums[j] = backup[j-curIndex];
